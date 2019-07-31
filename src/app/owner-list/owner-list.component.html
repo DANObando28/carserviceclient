@@ -5,6 +5,7 @@
       <mat-list-item *ngFor="let owner of bucket">
         
         <h3 mat-line>
+          <mat-checkbox id= {{owner.dni}}  (click) = "add(owner.dni)"> </mat-checkbox> 
           <a mat-button [routerLink]="['/owner-edit', owner.dni]">{{owner.name}}</a> 
         
             
@@ -16,6 +17,7 @@
 
   <button mat-fab color="primary" [routerLink]="['/owner-add']">ADD</button>
   <button mat-fab color="primary" [routerLink]="['/car-list']">BACK</button>
+  <a><button mat-fab color="secondary" (click)="delete(borrarP)" type="button">Delete</button></a>
 
   
 </mat-card>
