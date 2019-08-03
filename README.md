@@ -26,9 +26,18 @@ Debe tener un componente que permita ver la lista de propietarios.
 
 Debe tener un componente que permita crear o actualizar los propieatrios.
 
+*Se creo un nuevo componente llamado Owner-edit, en el archivo owner-edit.ts se define una lista , los servicios a utilizar y se definen varios metodos de una forma parecida al archivo car-edit.ts del componente car-edit, luego se modifica el componente owner-edit.html, para agregar los botones Add para añadir un nuevo owner, back para retroceder de pagina. Tambien es posible dar click en el nombre del propietario para desplegar el owner-edit.html donde se puede modificar el nombre del propietario, el DNI o borrar el propietario.
 
 
 Se debe poder eliminar varios propietarios al tiempo y Al eliminar un propietario debe eliminarse la relación que este tenga con un
 carro.
 
+*En el componente owner-list, se modifica el archivo owner-list.ts, se agregan los servicios necesarios como carservice.ts que para esta tarea es necesario para que sea posible desasociar un owner de un carro al momento de ser eliminados.
+Fueron creado el metodo delete , su funcion es que en el momento que se utilize el borrado, compare los Dni en la lista de owner y la lista de carros, en caso de encontrar Dni iguales lo eliminara de la los autos y este quedara sin OwnerDni.
+
+Para eliminar de manera simultanea se modifica el componente owner-list en su archivo owner-list.html, al momento de listar los nombres se utiliza Mat-CheckBox para que aparezca un recuadro seleccionable , siendo posible seleccionar varios nombres de manera simultanea los nombres seleccionados se guardan en una lista llamada BorrarP por medio del metodo add definido en owner-list.ts, y se añade un boton llamado "Delete" , su funciona es que al momento de que se le de click, va invocar el metodo delete y elimina los nombres listados en la lista BorrarP.
+
+Para terminar hay que resaltar que para que todo funcione correctamente es necesario modificar los archivos appmodule.ts y app-routing.module.ts, en appmodule.ts hay que verificar que cada componente nuevo haya sido importado y declarado correctamente.
+
+En app-routing-module.ts hay que verificar que esten correctamente importados cada uno de los componentes creados y declarar cada ruta nueva.
 
