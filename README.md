@@ -41,3 +41,6 @@ Para terminar hay que resaltar que para que todo funcione correctamente es neces
 
 En app-routing-module.ts hay que verificar que esten correctamente importados cada uno de los componentes creados y declarar cada ruta nueva.
 
+
+-Daniel Arango Obando 1020465122
+
